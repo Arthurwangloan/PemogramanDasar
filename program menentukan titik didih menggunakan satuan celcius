@@ -1,0 +1,34 @@
+# Define a function to determine boiling point
+def determine_didih_point():
+    print("Select a substance:")
+    print("1. Water")
+    print("2. Ethanol")
+    print("3. Methanol")
+    print("4. Glycerol")
+    print("5. Other (enter custom value)")
+
+    choice = int(input("Enter your choice: "))
+
+    if choice == 1:
+        substance = "Water"
+        didih_point = 100
+    elif choice == 2:
+        substance = "Ethanol"
+        didih_point = 78
+    elif choice == 3:
+        substance = "Methanol"
+        didih_point = 65
+    elif choice == 4:
+        substance = "Glycerol"
+        didih_point = 290
+    elif choice == 5:
+        substance = input("Enter the substance: ")
+        didih_point = float(input("Enter the didih point (°C): "))
+    else:
+        print("Invalid choice. Exiting program.")
+        return
+
+    print(f"\nThe didih point of {substance} is {didih_point}°C.")
+
+# Call the function
+determine_didih_point()
